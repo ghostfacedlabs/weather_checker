@@ -1,0 +1,27 @@
+#header {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#summary {
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+#input-form {
+    width: 75%;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#table-format {
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#contact-form {
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 50px;
+}

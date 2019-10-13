@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<h4 id="header">
+        Local Weather Forecast
+        <small class="text-muted">Powered By Dark Sky</small>
+</h4>
+<form id="input-form" action="/check" method="post">
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Zip Code</label>
+                <input type="text" pattern="[0-9]*" class="form-control" required name="zip_code"
+                        id="exampleFormControlInput1" placeholder="Zip Code">
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2" name="submit">Get Forcast</button>
+
+</form>
+{% endblock %}

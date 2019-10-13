@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}Forecast{% endblock %}
+
+{% block main %}
+
+<h4 id="header">
+    Weather Forecast for {{ zip_code }}
+    <small class="text-muted">Powered By Dark Sky</small>
+</h4>
+
+<h5 id="summary">
+    Summary:
+    <small class="text-muted">{{ forecast['daily']['data'][0]['summary'] }}</small>
+</h5>
+
+<div id="table-format">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Current Temp</th>
+                <th scope="col">High</th>
+                <th scope="col">Low</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ forecast['currently']['temperature'] }}</td>
+                <td>{{ forecast['daily']['data'][0]['temperatureHigh'] }}</td>
+                <td>{{ forecast['daily']['data'][0]['temperatureLow'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+
+current = response_json['currently']['temperature']
+# high = ['daily']['data'][0]['temperatureHigh']
+#low = ['daily']['data']['temperatureLow']
+#summary = ['daily']['data']['summary']
